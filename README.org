@@ -1,0 +1,20 @@
+#+TITLE:   inkscape.el
+#+DATE:    November 7, 2020
+
+Use ~M-x inkscape~ (or ~M-x ink~) to
+1. Query for a file name to edit from the figure directory (~./figures/~ by default)
+2. If the file does not exist, create it from the template (stored in
+   ~inkscape-plain-svg-template~, by default the contents of [[file:template.svg]])
+3. Open Inkscape (asynchronically) on the file
+4. Once the process exists, compile the file to ~pdf_tex~ by defalut (contolled
+   by ~inkscape-compilation-args~)
+5. Check that the target file exists. If it does, copy the include string
+   (~\inklude{0.7\textwidth}{%s.pdf_tex}~ by default).
+
+Doom Emacs recipe:
+#+begin_src emacs-lisp
+(package! inkscape
+  :recipe (:host github
+           :repo "ymarco/inkscape.el"
+           :files ("*.el" "*.svg")))
+#+end_src
