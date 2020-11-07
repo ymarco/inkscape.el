@@ -99,5 +99,8 @@ subprocess is done, the SVG is compiled to
       (kill-new (format inkscape-include-string fig-name))
       (message "Copied include string"))))
 
+;;;###autoload
+(defalias 'ink 'inkscape)
+
 (provide 'inkscape)
 ;;; inkscape.el ends here
