@@ -79,9 +79,10 @@ subprocess is done, the SVG is compiled to
   (interactive (list (completing-read
                       "Figure file name (no extension): "
                       (mapcar #'file-name-sans-extension
-                              (nconc (file-expand-wildcards (concat inkscape-fig-dir "*.pdf"))
-                                     (file-expand-wildcards (concat inkscape-fig-dir "*.svg"))))
+                              (file-expand-wildcards (concat inkscape-fig-dir "*.svg")))
                       nil nil inkscape-fig-dir)))
+  (unless (file-directory-p inkscape-fig-dir)
+    (mkdir inkscape-fig-dir))
   (let ((output-svg (concat fig-name "." "svg"))
         (output-to-include (concat fig-name "." inkscape-output-format)))
     (unless (file-exists-p output-svg)
