@@ -33,7 +33,11 @@
   :type 'string)
 
 (defcustom inkscape-include-string
-  (concat "\\inklude{0.7\\textwidth}{%s." inkscape-output-format "}")
+  (concat "\\def\\svgwidth{0.7\\textwidth}"
+          "\n"
+          "\\input{./figures/%s."
+          inkscape-output-format
+          "}")
   "String to be added to the `kill-ring' at the end of a successful `inkscape' invocation.
 %s is used as a placeholder for a figure name a (path with no extension)."
   :type 'string)
