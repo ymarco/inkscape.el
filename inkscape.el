@@ -40,7 +40,9 @@
 
 (defcustom inkscape-plain-svg-template
   (with-temp-buffer
-    (insert-file-contents-literally "./template.svg")
+    (insert-file-contents
+     (concat (file-name-directory (locate-library "inkscape.el"))
+             "template.svg"))
     (buffer-substring-no-properties (point-min) (point-max)))
   "Template svg to start editing from."
   :type 'string)
