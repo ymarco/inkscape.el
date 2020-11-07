@@ -4,7 +4,7 @@
 Use ~M-x inkscape~ (or ~M-x ink~) to
 1. Query for a file name to edit from the figure directory (~./figures/~ by default)
 2. If the file does not exist, create it from the template (stored in
-   ~inkscape-plain-svg-template~, by default the contents of [[file:template.svg]])
+   ~inkscape-plain-svg-template~, by default the contents of ~template.svg~)
 3. Open Inkscape (asynchronically) on the file
 4. Once the process exists, compile the file to ~pdf_tex~ by defalut (contolled
    by ~inkscape-compilation-args~)
