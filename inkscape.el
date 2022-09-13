@@ -33,7 +33,7 @@
   :type 'string)
 
 (defcustom inkscape-include-string
-  (concat "\\inkfig{%s." inkscape-output-format "}")
+  (concat "\\inkfig{%s" "}")
   "String to be added to the `kill-ring' at the end of a successful `inkscape' invocation.
 %s is used as a placeholder for a figure name a (path with no extension)."
   :type 'string)
