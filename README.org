@@ -9,7 +9,7 @@ Use ~M-x inkscape~ (or ~M-x ink~) to
 4. Once the process exits, compile the file to ~pdf_tex~ by default (controlled
    by ~inkscape-compilation-args~)
 5. Check that the target file exists. If it does, copy the include string
-   (~\def\svgwidth{0.7\textwidth} \input{./figures/%s.pdf_tex}~ by default).
+   (~\incfig{%s}~ by default).
 
 Doom Emacs recipe:
 #+begin_src emacs-lisp
