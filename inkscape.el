@@ -2,20 +2,20 @@
 ;;
 ;; Copyright (C) 2020 Yoav Marco
 ;;
-;; Author: Yoav Marco <http://github/yoavm448>
-;; Maintainer: Yoav Marco <yoavm448@gmail.com>
+;; Author: Yoav Marco <http://github/yoavm448> (<yoavm448@gmail.com>)
+;; Customized by Sinthoras
 ;; Created: August 19, 2020
-;; Modified: August 19, 2020
-;; Version: 0.0.1
+;; Modified: September 13, 2022
+;; Version: 0.0.2
 ;; Keywords:
-;; Homepage: https://github.com/yoavm448/inkscape
+;; Homepage: https://github.com/Sinthoras7/inkscape
 ;; Package-Requires: ((emacs 28.0.50) (cl-lib "0.5") (async "1.0"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
 ;;; Commentary:
 ;;
-;;  compfortably launch inkscape from emacs
+;;  comfortably launch inkscape from emacs
 ;;
 ;;; Code:
 (require 'async)
@@ -33,11 +33,7 @@
   :type 'string)
 
 (defcustom inkscape-include-string
-  (concat "\\def\\svgwidth{0.7\\textwidth}"
-          "\n"
-          "\\input{./figures/%s."
-          inkscape-output-format
-          "}")
+  (concat "\\inkfig{%s." inkscape-output-format "}")
   "String to be added to the `kill-ring' at the end of a successful `inkscape' invocation.
 %s is used as a placeholder for a figure name a (path with no extension)."
   :type 'string)
