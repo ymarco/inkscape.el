@@ -15,7 +15,7 @@ Doom Emacs recipe:
 #+begin_src emacs-lisp
 (package! inkscape
   :recipe (:host github
-           :repo "ymarco/inkscape.el"
+           :repo "Sinthoras7/inkscape.el"
            :files ("*.el" "*.svg")))
 #+end_src
 
@@ -23,6 +23,6 @@ Installation via use-package and straight (https://github.com/radian-software/st
 #+begin_src emacs-lisp
 (use-package inkscape
   :straight (:host github
-             :repo "ymarco/inkscape.el"
+             :repo "Sinthoras7/inkscape.el"
              :files ("*.el" "*.svg")))
 #+end_src
