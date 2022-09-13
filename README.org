@@ -16,6 +16,7 @@ Doom Emacs recipe:
 (package! inkscape
   :recipe (:host github
            :repo "Sinthoras7/inkscape.el"
+           :branch "sinthoras-my-customizations"
            :files ("*.el" "*.svg")))
 #+end_src
 
@@ -24,5 +25,6 @@ Installation via use-package and straight (https://github.com/radian-software/st
 (use-package inkscape
   :straight (:host github
              :repo "Sinthoras7/inkscape.el"
+             :branch "sinthoras-my-customizations"
              :files ("*.el" "*.svg")))
 #+end_src
