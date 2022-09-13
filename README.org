@@ -6,7 +6,7 @@ Use ~M-x inkscape~ (or ~M-x ink~) to
 2. If the file does not exist, create it from the template (stored in
    ~inkscape-plain-svg-template~, by default the contents of ~template.svg~)
 3. Open Inkscape (asynchronically) on the file
-4. Once the process exists, compile the file to ~pdf_tex~ by defalut (contolled
+4. Once the process exits, compile the file to ~pdf_tex~ by default (controlled
    by ~inkscape-compilation-args~)
 5. Check that the target file exists. If it does, copy the include string
    (~\def\svgwidth{0.7\textwidth} \input{./figures/%s.pdf_tex}~ by default).
@@ -17,4 +17,12 @@ Doom Emacs recipe:
   :recipe (:host github
            :repo "ymarco/inkscape.el"
            :files ("*.el" "*.svg")))
+#+end_src
+
+Installation via use-package and straight (https://github.com/radian-software/straight.el):
+#+begin_src emacs-lisp
+(use-package inkscape
+  :straight (:host github
+             :repo "ymarco/inkscape.el"
+             :files ("*.el" "*.svg")))
 #+end_src
